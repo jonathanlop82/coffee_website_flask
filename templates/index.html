@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href={{ url_for("static", filename="/css/style.css") }}>
+    <script src="https://kit.fontawesome.com/e4414c5143.js" crossorigin="anonymous"></script>
+    <title>Coffees Shops</title>
 </head>
 <body>
+    <h2>Coffees Shops</h2>
     {% for cf in cafes %}
-    <p>{{ cf.name }}</p>
-    
-
+    <div class="polaroid">
+    <img src={{ cf.img_url }} alt="5 Terre" style="width:100%">
+        <div class="container">
+            <h3>{{ cf.name }}</h3>
+            <p>Location: <a href={{ cf.map_url }}>{{ cf.location }}</a></p>
+            <p>Coffee Price: {{ cf.coffee_price }}</p>
+            {% if cf.has_wifi == True %}
+                <i class="fa-solid fa-wifi"></i>
+            {% endif %}
+            {% if cf.has_sockets == True %}
+                <i class="fa-solid fa-charging-station"></i>
+            {% endif %}
+            {% if cf.has_toilet == True %}
+                <i class="fa-solid fa-toilet"></i>
+            {% endif %}
+        </div>
+    </div>
     {% endfor %}
 </body>
 </html>
