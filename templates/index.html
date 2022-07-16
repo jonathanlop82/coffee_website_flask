@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href={{ url_for("static", filename="/css/style.css") }}>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/e4414c5143.js" crossorigin="anonymous"></script>
     <title>Coffees Shops</title>
 </head>
 <body>
-    <h2>Coffees Shops</h2>
+    <h1>Coffees &nbsp; Shops</h1>
     {% for cf in cafes %}
     <div class="polaroid">
     <img src={{ cf.img_url }} alt="5 Terre" style="width:100%">

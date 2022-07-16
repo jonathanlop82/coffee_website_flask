@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={{ url_for("static", filename="/css/style.css") }}>
+    <title>Add Coffess</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Add Coffess</h1>
+        <form action={{ url_for('add') }} method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" value="" size="30"><br><br>
+
+            <label for="url_map">URL Map:</label><br>
+            <input type="text" id="url_map" name="url_map" value="" size="30"><br><br>
+
+            <label for="url_image">Image URL:</label><br>
+            <input type="text" id="url_image" name="url_image" value="" size="30"><br><br>
+
+            <label for="location">Location:</label><br>
+            <input type="text" id="location" name="location" value="" size="30"><br><br>
+
+            <label for="has_sockets">Has Sockets?</label><br>
+            <input type="checkbox" id="has_sockets" name="has_sockets" value="has_sockets"><br><br>
+
+            <label for="has_toilet">Has Toilet?</label><br>
+            <input type="checkbox" id="has_toilet" name="has_toilet" value="has_toilet"><br><br>
+
+            <label for="has_wifi">Has Wifi?</label><br>
+            <input type="checkbox" id="has_wifi" name="has_wifi" value="has_wifi"><br><br>
+
+            <label for="can_take_calls">Can take calls?</label><br>
+            <input type="checkbox" id="has_wifi" name="can_take_calls" value="can_take_calls"><br><br>
+
+            <label for="seats">Seats:</label>
+            <select id="seats" name="seats">
+                <option value="0-10">0 - 10</option>
+                <option value="10-20">10 - 20</option>
+                <option value="20-30">20 - 30</option>
+                <option value="30-40">30 - 40</option>
+                <option value="40-50">40 - 50</option>
+                <option value="+50">+50</option>
+            </select><br><br>
+
+            <label for="coffee_price">Coffee price:</label><br>
+            <input type="text" id="coffee_price" name="coffee_price" value="" size="6"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+    
+</body>
+</html>
